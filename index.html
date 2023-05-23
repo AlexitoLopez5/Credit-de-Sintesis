@@ -1,0 +1,285 @@
+<html>
+<head>
+  <title>Mi sitio web</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="contenidor2">
+        <h1 class="titulo">Robot Maradonià</h1>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="#inici" onclick="mostrarContenido('inici')">Inici</a></li>
+      <li><a href="#objectius" onclick="mostrarContenido('objectius')">Objectius del projecte</a></li>
+      <li><a href="#desenvolupament" onclick="mostrarContenido('desenvolupament')">Fase de desenvolupament</a></li>
+      <li><a href="#error" onclick="mostrarContenido('error')">Error en el sistema</a></li>
+      <li><a href="/joc.html"> Joc del robot</a></li>
+    </ul>
+  </nav>
+  <div id="inici" class="contenido">
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h3>Qui som </h3>
+    <br>
+    <div class="contenido1">
+    <p>Som Jaipreet Singh i Alex Lopez, alumnes de l'Institut El Puig Castellar, i hem creat un robot capaç de seguir línies (l'objectiu principal) i manejar mitjançant bluetooth.<br><br>
+        Aquest projecte tracta de crear un robot mòbil que segueixi el recorregut marcat per unes línies negres.
+        El robot detectarà amb el sensor d'infrarojos la presència de les línies negres per poder rectificar la seva trajectòria i seguir el recorregut marcat pel mateix.</p>
+    </div>
+    <img class="fotos-nosotros" src="f1 (1).jpg" alt="Jaipreet Singh">
+    <img class="fotos-nosotros" src="f1.jpg" alt="Alex Lopez">  
+    <p class="pie-fotos">&nbsp;Jaipreet Singh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alex Lopez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+    <h3>Introducció al projecte</h3>
+    <br>
+    <div class="contenido1">
+    <p>Aquest projecte consisteix en la creació d'un cotxe teledirigit amb un robot seguidor de línies utilitzant Arduino i un detector de LED infraroig. Després de considerar diverses idees, vam optar per aquesta opció. El robot seguidor de línies és emocionant i permet aplicar conceptes de programació i electrònica en un projecte físic. Integrarem un sistema de control remot per dirigir el robot en diferents direccions. Vam realitzar una cerca d'informació i vam trobar una idea clara per muntar el robot seguidor de línies.</p>
+    </div>
+    <img class="robot-sigue-linias" src="robot sigue linias.jpg" alt="Robot Segueix Línies">
+    </div>
+  <div id="objectius" class="contenido">
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h3>Objectius del projecte</h3>
+    <br>
+    <div class="contenido1">
+      <p>El principal objectiu d'aquest projecte és dissenyar i construir un robot mòbil que sigui capaç de seguir una línia utilitzant sensors d'infrarojos i motors de corrent contínua. <br> Farem servir Arduino com a plataforma de control i un mòdul bluetooth per al control remot. La idea és que el robot pugui detectar i seguir amb precisió les línies negatives utilitzant els sensors, corregint la trajectòria quan sigui necessari. Durant el projecte, triarem els components adequats i realitzarem construccions mecàniques, electròniques i de programació. Farem proves i ajustos per assegurar-nos que el robot compleix amb les expectatives. <br> En resum, el nostre objectiu és crear un robot mòbil que segueixi línies amb precisió utilitzant sensors d'infrarojos i controlat per Arduino mitjançant un mòdul bluetooth, integrant coneixements de robòtica i programació.</p>
+    </div>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/NZt_MXZc_aQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div id="desenvolupament" class="contenido">
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h3>Pressupost</h3>
+    <br>
+    <table>
+      <tr>
+          <th>Kit coche</th>
+          <th>Placa Arduino Uno</th>
+          <th>Breadboard</th>
+          <th>L298n</th>
+          <th>2 sensors d'infrarojos</th>
+          <th>Cables de connexions entre els components</th>
+      </tr>
+      <tr>
+          <td><img src="kit coche.png" width="100" height="100" alt="kit coche"></td>
+          <td><img src="arduino.png" width="100" height="100" alt="arduino"></td>
+          <td><img src="breadboard.png" width="100" height="100" alt="breadboard"></td>
+          <td><img src="l298n.png" width="100" height="100" alt="l298n"></td>
+          <td><img src="sensores.png" width="100" height="100" alt="sensors d'infrarojos"></td>
+          <td><img src="cables.png" width="100" height="100" alt="cables"></td>
+      </tr>
+      <tr>
+          <td>15,50€</td>
+          <td>29,28€</td>
+          <td>7,97€</td>
+          <td>12,16€</td>
+          <td>6,99€</td>
+          <td>8,48€</td>
+      </tr>
+  </table>
+  <h3>Desenvolupament</h3>
+  <br>
+  <div class="contenido1">
+  <p>El projecte consta de quatre etapes principals:</p>
+
+    <p>1. Connexió de components bàsics a l'Arduino: En aquesta etapa, es connecten els sensors infrarojos i els motors de corrent continu a l'Arduino segons les instruccions del fabricant.</p>
+    
+    <p>2. Programació de l'Arduí: Es programa l'Arduí perquè pugui llegir els sensors infrarojos, controlar els motors i seguir la línia. S'utilitza un llenguatge de programació basat en Arduino, com ara l'Arduino IDE.</p>
+    
+    <p>3. Connexió de tots els components: Es realitzen les connexions necessàries entre els diferents components, com ara la connexió dels cables dels motors als pins de sortida de l'Arduino i la connexió dels cables dels sensors infrarojos als pins d'entrada corresponents.</p>
+    
+    <p>4. Configuració del xassís amb els components: S'acobla el xassís del robot i es col·loquen els motors i sensors a les posicions adequades. És important assegurar-se que tots els components estiguin fermament fixats i que no hi hagi interferències entre ells.</p>
+    
+    <p>En completar aquestes etapes, el robot mòbil estarà llest per detectar i seguir línies utilitzant els sensors infrarojos i els motors controlats per l'Arduino.</p>
+  </div>
+  <div class="album">
+    <div class="photo">
+        <img src="FASE 1.png" width="350" height="350" alt="Foto 1">
+    </div>
+    <div class="photo">
+        <img src="imagen2.jpg" alt="Foto 2">
+    </div>
+    <div class="photo">
+        <img src="imagen3.jpg" alt="Foto 3">
+    </div>
+  </div>
+  <h3>Conexions del Arduino</h3>
+  <br>
+  <div class="contenido1">
+  <p>El projecte del robot mòbil que segueix línies es divideix en tres fases:</p>
+  </div>
+  <img class="robot-sigue-linias" src="conexiones arduino.png" alt="conexiones arduino">
+  <h3>Funcionament dels sensors</h3>
+  <br>
+  <div class="contenido1">
+  <p>El projecte del robot mòbil que segueix línies es divideix en tres fases:</p>
+
+    <p>1. Seguiment recte: El robot es mou en línia recta quan els dos sensors infrarojos detecten la línia. Es realitzen ajustos per corregir desviacions.</p>
+    
+    <p>2. Gir a l'esquerra: Si el sensor dret detecta una desviació cap a la dreta, el robot gira gradualment cap a l'esquerra per tornar a la línia.</p>
+    
+    <p>3. Gir a la dreta: Si el sensor esquerre detecta una desviació cap a l'esquerra, el robot gira gradualment cap a la dreta per tornar a la línia.</p>
+    
+    <p>Aquestes fases permeten al robot seguir la línia amb precisió i eficàcia, corregint les desviacions i realitzant els girs necessaris.</p>
+  </div>
+  <img class="robot-sigue-linias" src="algoritmo.JPG" alt="algoritmo">
+  <br>
+  <h3>Codi Arduino</h3>
+  <br>
+  <textarea class="codigo" rows="20" cols="80">
+    const int sensorIzq = A0;
+    const int sensorDer = A1;
+   
+    int valorizq = 0;
+    int valorder = 0;
+   
+    int mizqA = 3;
+    int mizqB = 4;
+    int ControlMotorIzq = 9;
+   
+    int mderA = 5;
+    int mderB = 6;
+    int ControlMotorDer = 10;
+  
+    void setup () {
+   
+      pinMode(sensorIzq, INPUT);
+      pinMode(sensorDer, INPUT);
+     
+      pinMode(mizqA, OUTPUT);
+      pinMode(mizqB, OUTPUT);
+      pinMode(ControlMotorIzq, OUTPUT);
+     
+      pinMode(mderA, OUTPUT);
+      pinMode(mderB, OUTPUT);
+      pinMode(ControlMotorDer, OUTPUT);
+   
+      Serial.begin(9600);
+    }
+  
+    void loop() {
+     
+    valorizq = digitalRead(sensorIzq);
+    valorder = digitalRead(sensorDer);
+  
+      Serial.print("IZQ: ");
+      Serial.print(valorizq);
+   
+      Serial.print("\tDER: ");
+      Serial.print(valorder);
+   
+      Serial.print("\n");
+  
+    if (valorizq == 0 && valorder == 1) {
+  
+      analogWrite(ControlMotorIzq,125);
+     
+      digitalWrite(mizqA, LOW);
+      digitalWrite(mizqB, HIGH);
+      digitalWrite(mderB, LOW);
+      digitalWrite(mderA, LOW);
+     
+      Serial.print("MOVER IZQUIERDO");
+      Serial.print("\n");
+    }
+  
+    else if (valorizq == 1 && valorder == 0) {
+  
+      analogWrite(ControlMotorDer,125);
+     
+      digitalWrite(mizqA, LOW);
+      digitalWrite(mizqB, LOW);
+      digitalWrite(mderB, HIGH);
+      digitalWrite(mderA, LOW);
+  
+      Serial.print("MOVER DERECHO");
+      Serial.print("\n");          
+    }
+  
+    /*
+    else if (valorizq == 0 && valorder == 0) {
+   
+      analogWrite(ControlMotorIzq,85);
+      analogWrite(ControlMotorDer,85);
+     
+      digitalWrite(mizqA, LOW);
+      digitalWrite(mizqB, HIGH);
+      digitalWrite(mderB, HIGH);
+      digitalWrite(mderA, LOW);
+     
+      Serial.print("MOVER ADELANTE");
+      Serial.print("\n");    
+    }
+  
+     else {
+  
+      analogWrite(ControlMotorIzq,0);
+      analogWrite(ControlMotorDer,0);
+     
+      digitalWrite(mizqA, LOW);
+      digitalWrite(mizqB, LOW);
+      digitalWrite(mderB, LOW);
+      digitalWrite(mderA, LOW);
+  
+      Serial.print("PARAR");
+      Serial.print("\n");
+    }
+    */
+  
+    } 
+</textarea>
+<br>
+<br>
+<a class="download-btn" href="codigo_arduino.ino">Descarregar Codi Aqui</a>
+ </div>
+</div>    
+<br>
+<br>
+  <div id="error" class="contenido">
+    <br><br><br><br><br><br><br><br>
+    <div class="contenido1">
+      <p>Inicialment, no sabíem quins materials utilitzar, ja que aquest projecte no es podia completar amb cap kit preexistent. Vam començar comprant uns sensors (TRCT5000) que no eren compatibles amb les connexions desitjades per connectar-los a l'Arduino. Finalment, vam solucionar l'error comprant els sensors correctes (Oiyagai 5pcs IR)</p>
+    </div>
+    <br>
+    <img class="robot-sigue-linias" src="sensores.png" width="250" height="250" alt="sensores">
+    <br>
+    <br>
+    <div class="contenido1">
+      <p>En comprar el robot seguidor de línies, vam descobrir un dels motors trencat. Vam haver de comprar-ne un altre per posar-lo en marxa. Tot i això, estem contents amb la compra i gaudim de les seves funcionalitats.</p>
+    </div>
+    <br>
+    <img class="robot-sigue-linias" src="motor.jpg" width="250" height="250" alt="motor">
+    <br>
+    <br>
+    <div class="contenido1">
+      <p>Els sensors Oiyagai 5pcs IR eren desconeguts per a nosaltres i no sabíem com funcionaven. Tenien un apartat per modular la distància a la qual influïa el sensor, però, juntament amb un codi mal escrit, vam sobrecarregar un dels sensors que teníem i es va cremar. Afortunadament, en el paquet que vam comprar hi havia 4 sensors més, així que no vam haver de comprar-ne cap més. Ara estem més conscients de la importància de comprendre bé les especificacions i de verificar el codi abans de fer servir els sensors en futurs projectes.</p>
+    </div>
+    <br>
+    <img class="robot-sigue-linias" src="sensor quemado" width="250" height="250" alt="sensor quemado">
+    <div class="contenido1">
+      <p>Vam comprar una rèplica de la placa Arduino UNO, desafortunadament resultava ser de baixa qualitat i el nucli de la placa i va deixar de funcionar. Com a solució, vam decidir comprar una altra rèplica, però aquesta vegada optant per una de millor qualitat. Afortunadament, la nova rèplica ha funcionat de manera òptima i hem pogut continuar amb els nostres projectes sense problemes. Hem après la importància de seleccionar productes fiables i de qualitat en les nostres futures adquisicions.</p>
+    </div>
+    <br>
+    <img class="robot-sigue-linias" src="arduino falso.jpg" width="250" height="250" alt="arduino falso">
+    <br>
+    <br>
+  </div>
+
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="support">
+        <p>Suport tècnic: </p>
+        <p>alex.lopez.martinez@elpuig.xeill.net & jaipreet.singh@elpuig.xeill.net</p>
+      </div>
+      <div class="social-media">
+        <p class="textoblanco">Xarxes socials:</p>
+        <nav>
+          <a href="https://moodle.elpuig.xeill.net/login/index.php">Moodle Alex Lopez</a>
+          <a href="https://moodle.elpuig.xeill.net/user/profile.php?id=2747">Moodle Jaipreet Singh</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
